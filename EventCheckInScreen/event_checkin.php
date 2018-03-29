@@ -61,7 +61,7 @@ if (is_array($array)) {
 	<tbody>';
 	foreach($array as $subscriber){
 		if( isset($subscriber->$statusField) ) {
-			$checked = ('1'==$subscriber->$statusField) ? 'checked' : '';
+			$checked = ('true'==$subscriber->$statusField) ? 'checked' : '';
 			echo '<tr>';
 			echo '<tr><td>';
 			echo '<input type="checkbox" id="'.$subscriber->id.'" '.$checked.'>';
