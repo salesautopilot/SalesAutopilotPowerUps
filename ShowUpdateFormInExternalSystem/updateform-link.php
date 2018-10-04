@@ -42,7 +42,7 @@ $subscriberlist = json_decode($result);
 $curl = curl_init();
 curl_setopt_array($curl, array(
 CURLOPT_RETURNTRANSFER => true,
-CURLOPT_URL => 'http://'.$apiusername.':'.$apipassword.'@'.'restapi.emesz.com/updateformlink/'.$nl_id.'/'.$form_id.'/'.$subscriberlist[0]->id)
+CURLOPT_URL => 'https://'.$apiusername.':'.$apipassword.'@'.'api.salesautopilot.com/updateformlink/'.$nl_id.'/'.$form_id.'/'.$subscriberlist[0]->id.'/secure')
 );
 $updateformlink = curl_exec($curl);
 curl_close($curl);
